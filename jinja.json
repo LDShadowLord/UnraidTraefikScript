@@ -3,28 +3,48 @@
     "hidden": true,
     "replacement": "",
     "name": "Config ID",
-    "description": "Generated at runtime to ensure each config has a unique ID so all buttons work correctly.",
-    "url": null
+    "description": "[System] Generated at runtime to ensure each config has a unique ID so all buttons work correctly.",
+    "url": null,
+    "selected": null
   },
   "{{ container }}": {
     "hidden": true,
     "replacement": "",
     "name": "Container",
-    "description": "Generated on insertion to ensure it has the proper container name.",
-    "url": null
+    "description": "[System] Generated on insertion to ensure it has the proper container name.",
+    "url": null,
+    "selected": null
   },
   "{{ port }}": {
     "hidden": false,
     "replacement": "",
     "name": "Port",
     "description": "Is the *INTERNAL* port on the container that the Traefik service will be forwarding to.",
-    "url": "https://doc.traefik.io/traefik/routing/services/"
+    "url": "https://doc.traefik.io/traefik/routing/services/",
+    "selected": false
   },
   "{{ certresolver }}": {
     "hidden": false,
     "replacement": "default",
     "name": "Certresolver",
     "description": "[Recommended] Sets the TLS certresolver used to collect ACME certificates. Setting this prevents some TLS issues.",
-    "url": "https://doc.traefik.io/traefik/routing/routers/#certresolver"
+    "url": "https://doc.traefik.io/traefik/routing/routers/#certresolver",
+    "selected": false
+  },
+  "{{ middleware }}": {
+    "hidden": false,
+    "replacement": "",
+    "name": "Middleware",
+    "description": "Sets some Middleware to apply to the container.",
+    "url": "https://doc.traefik.io/traefik/routing/routers/#middlewares",
+    "selected": false
+  },
+  "{{ domain }}": {
+    "hidden": false,
+    "replacement": "example.com",
+    "name": "Domain",
+    "description": "[System] [Recommended] The domain that traffic will be routed to that will have a subdomain prefixed. Without this set Traefik will not work.",
+    "url": "https://doc.traefik.io/traefik/routing/routers/#rule",
+    "selected": false
   }
 }

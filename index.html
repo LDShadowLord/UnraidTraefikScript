@@ -1,7 +1,7 @@
 <html>
-    <head>
-        <title>Unraid Traefik Script</title>
-        <script>
+<head>
+    <title>Unraid Traefik Script</title>
+    <script>
             var configLocation = document.getElementById("configLocation");
 
             var replaceArray = {
@@ -22,46 +22,25 @@
                 }
                 configLocation.insertAdjacentHTML("beforeend", z);
             }
-        </script>
-        <script>
+    </script>
+    <script>
+            var title = document.getElementById("title-input").value;
+            var code = document.getElementById("code-textarea").value;
+            var link = document.getElementById("bookmarklet-a");
+            var codeOutput = document.getElementById("output-textarea");
+            var htmlOuput = document.getElementById("htmlOuput-textarea");
 
+            var output = "javascript:" + encodeURIComponent("(function(){" + code.trim() + "})();");
 
-            function cleanCode(code) {
-                return code.trim()
-            }
+            link.text = title;
+            link.href = output;
+            codeOutput.value = output;
 
-            function generateBookmarklet() {
-                var title = document.getElementById("title-input").value;
-                var code = document.getElementById("code-textarea").value;
-                var link = document.getElementById("bookmarklet-a");
-                var codeOutput = document.getElementById("output-textarea");
-                var htmlOuput = document.getElementById("htmlOuput-textarea");
-
-                var output = "javascript:" + encodeURIComponent("(function(){" + cleanCode(code) + "})();");
-
-                link.text = title;
-                link.href = output;
-                codeOutput.value = output;
-
-                htmlOuput.value = "<a href=\"" + output + "\">" + title + "</a>"
-
-            }
-
-            function runCode() {
-                var code = document.getElementById("code-textarea").value;
-                eval(code);
-            }
-
-            function clearCode() {
-                document.getElementById("title-input").value = "bookmarklet";
-                document.getElementById("code-textarea").value = "";
-            }
-
-
-        </script>
-    </head>
-    <body>
-        Hi, it looks like you've not run the script yet!
-        Run the script to generate this file!
-    </body>
+            htmlOuput.value = "<a href=\"" + output + "\">" + title + "</a>"
+    </script>
+</head>
+<body>
+    Hi, it looks like you've not run the script yet!
+    Run the script to generate this file!
+</body>
 </html>
