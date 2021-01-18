@@ -1,12 +1,19 @@
 # UnraidTraefikPlugin
 
-https://caiorss.github.io/bookmarklet-maker/
+A script designed to be used in conjunction with Traefik & Unraid.
+Generates HTML table objects to be dynamically inserted into Unraid Docker pages to enable Traefik functionality.
+This project is not affiliated with either Traefik or Unraid.
 
-Use the above to make a simple "button" that you can click on any Unraid Docker page to instantly run the script.
+## How It Works
+Create a *config.json* file similar to the *example.json* file.
+Open main.py (Python 3.8, Earlier not Supported)
+It will create an *index.html* page that will let you generate a bookmarklet
 
-Simple script - Adds traefik entries to an Unraid Docker page
-Edit the variables in main.js first to match with your domain format/name
+## Roadmap
+* Create a Tool to generate the *config.json* file based off user inputs
+* Add additional Node files
 
-You can easily add more %perquotes% to be replaced by appending to the "replaceArray" and including both the "%perquote%" and the value it should be swapped with.
-
-You can add more fields by adding to the "traefikNodes" object. The values in it are standard HTML divs that are encoded using the Javascript "encodeURIComponent" function. All variables that need changing are replaced with a perquote.
+## Expandability
+Don't see what you need here?
+Create your own Node file and set up a PR to merge them.
+Read *DOCS/development.md* for how to do this.

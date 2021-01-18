@@ -1,0 +1,25 @@
+<div id="ConfigNum{{ config_id }}" class="config_always">
+	<input type="hidden" name="confName[]" value="Traefik Rule">
+	<input type="hidden" name="confTarget[]" value="traefik.http.routers.{{ container }}.rule">
+	<input type="hidden" name="confDefault[]" value="">
+	<input type="hidden" name="confMode[]" value="">
+	<input type="hidden" name="confDescription[]" value="Traefik Rules">
+	<input type="hidden" name="confType[]" value="Label">
+	<input type="hidden" name="confDisplay[]" value="advanced">
+	<input type="hidden" name="confRequired[]" value="false">
+	<input type="hidden" name="confMask[]" value="false">
+	<table class="settings">
+		<tbody>
+			<tr>
+				<td class="" style="vertical-align:top">Traefik Rule:</td>
+				<td>
+					<input type="text" name="confValue[]" default="" value="Host({{ domain_pattern }})" autocomplete="off">
+					&nbsp;
+					<button type="button" onclick="editConfigPopup({{ config_id }},true)">Edit</button>
+					<button type="button" onclick="removeConfig({{ config_id }})">Remove</button>
+					<div class="orange-text">Traefik Rules</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

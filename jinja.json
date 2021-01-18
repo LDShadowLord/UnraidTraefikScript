@@ -1,0 +1,30 @@
+{
+  "{{ config_id }}": {
+    "hidden": true,
+    "replacement": "",
+    "name": "Config ID",
+    "description": "Generated at runtime to ensure each config has a unique ID so all buttons work correctly.",
+    "url": null
+  },
+  "{{ container }}": {
+    "hidden": true,
+    "replacement": "",
+    "name": "Container",
+    "description": "Generated on insertion to ensure it has the proper container name.",
+    "url": null
+  },
+  "{{ port }}": {
+    "hidden": false,
+    "replacement": "",
+    "name": "Port",
+    "description": "Is the *INTERNAL* port on the container that the Traefik service will be forwarding to.",
+    "url": "https://doc.traefik.io/traefik/routing/services/"
+  },
+  "{{ certresolver }}": {
+    "hidden": false,
+    "replacement": "default",
+    "name": "Certresolver",
+    "description": "[Recommended] Sets the TLS certresolver used to collect ACME certificates. Setting this prevents some TLS issues.",
+    "url": "https://doc.traefik.io/traefik/routing/routers/#certresolver"
+  }
+}
