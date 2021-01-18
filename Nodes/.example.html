@@ -1,0 +1,41 @@
+<!--
+    This is a copy of the Traefik_Certresolver.html file.
+    The comments explain the code directly below the comment.
+    This assumes you have some knowledge of HTML to read this document.
+    The entire snippet is based directly off the HTML seen in the Unraid Docker Edit pages.
+-->
+<!--ConfigNum{{ config_id }} is the id applied to the entire text box. If you edit or Delete this box, it uses this Config ID to find the box and interact with it.-->
+    <div id="ConfigNum{{ config_id }}" class="config_always">
+        <!--The name displayed by Unraid inside the 'Edit' box-->
+        <input type="hidden" name="confName[]" value="Traefik Certresolver">
+        <!--This is the label key that Traefik uses to manage the container. The container variable is replaced at injection.-->
+        <input type="hidden" name="confTarget[]" value="traefik.http.routers.{{ container }}.tls.certresolver">
+        <input type="hidden" name="confDefault[]" value="">
+        <input type="hidden" name="confMode[]" value="">
+        <!--The short description inside the 'Edit' Box-->
+        <input type="hidden" name="confDescription[]" value="Traefik Certresolver">
+        <input type="hidden" name="confType[]" value="Label">
+        <!--Advanced is hidden below 'show more settings' by default. Always puts it above the fold.-->
+        <input type="hidden" name="confDisplay[]" value="advanced">
+        <input type="hidden" name="confRequired[]" value="false">
+        <input type="hidden" name="confMask[]" value="false">
+        <table class="settings">
+            <tbody>
+                <tr>
+                    <!--The title displayed to the left of the text box-->
+                    <td class="" style="vertical-align:top">Traefik Certresolver:</td>
+                    <td>
+                        <!--The contents of the text box (The value Traefik uses)-->
+                        <!--certresolver is replaced by the script on generation-->
+                        <input type="text" name="confValue[]" default="" value="{{ certresolver }}" autocomplete="off">
+                        &nbsp;
+                        <!--These buttons are used to edit or remove the label box from the interface-->
+                        <button type="button" onclick="editConfigPopup({{ config_id }},true)">Edit</button>
+                        <button type="button" onclick="removeConfig({{ config_id }})">Remove</button>
+                        <!--The Orange descriptive text below the text box-->
+                        <div class="orange-text">Traefik Certresolver</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
