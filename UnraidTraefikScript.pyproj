@@ -22,12 +22,15 @@
     <Content Include=".gitattributes" />
     <Content Include=".github\ISSUE_TEMPLATE\new-label.md" />
     <Content Include=".gitignore" />
+    <Content Include="docs\credits.md" />
+    <Content Include="docs\development.md" />
     <Content Include="docs\example.html" />
     <Content Include="index.html" />
     <Content Include="injection.js" />
     <Content Include="nodes\apply_middleware.html" />
     <Content Include="nodes\enable_traefik.html" />
     <Content Include="nodes\forwarding_port.html" />
+    <Content Include="nodes\jinja.json" />
     <Content Include="nodes\set_certresolver.html" />
     <Content Include="nodes\standard_url_rules.html" />
     <Content Include="output\starter.html" />
